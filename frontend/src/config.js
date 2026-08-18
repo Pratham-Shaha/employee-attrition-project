@@ -1,8 +1,9 @@
 /**
  * API Configuration
- * Centralized location for backend URL
- * Change this to update the API endpoint
+ * Use a relative path by default so the app works on Vercel.
+ * For local development, Vite proxy forwards /api calls to the backend.
  */
 
-export const API_BASE_URL = '';
-export const PREDICT_ENDPOINT = '/api/predict';
+const rawApiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? '';
+export const API_BASE_URL = rawApiBaseUrl.replace(/\/$/, '');
+export const PREDICT_ENDPOINT = `${API_BASE_URL || ''}/api/predict`; 
