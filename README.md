@@ -32,7 +32,7 @@ The application allows users to:
 - Submit the information for prediction
 - Send the data to the backend API
 - Get a Machine Learning-based attrition prediction
-- View the prediction through an interactive web interface
+- View the prediction through an interactive web interface and also view the probability of attrition
 
 ### Web Application
 
@@ -89,7 +89,7 @@ The backend:
 
 ## Machine Learning
 
-The project uses a trained Machine Learning classification model to predict employee attrition.
+The project uses a trained Machine Learning classification model (Ensemble Learning - Random Forest Classifier) to predict employee attrition.
 
 The model takes employee-related features as input and produces an attrition prediction as the output.
 
